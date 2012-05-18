@@ -7,7 +7,7 @@
         [hiccup.form-helpers ]
         [hiccup.page-helpers]))
 
-
+;Validation and storage needs to go to the model
 (defn valid? [{:keys [username password password-confirmation]}]
   (validation/rule (validation/min-length? username 1)
     [:username "Your username must have more than 1 letter."])
@@ -53,7 +53,9 @@
 
 (defpage [:post "/register"] {:as credentials}
   (if (valid? credentials)
-    (save credentials)
+    (do
+      (save credentials)
+      (resp/redirect "/"))
     (render "/register" credentials)
   )
 )  

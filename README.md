@@ -1,6 +1,8 @@
 # markify
 
-A website written in noir. 
+__THIS IS WORK IN PROGRESS__
+
+A clojure/noir playground, where I try to implement a bookmarking service.
 
 ## Usage
 
@@ -8,10 +10,4 @@ A website written in noir.
 lein deps
 lein run
 ```
-
-## License
-
-Copyright (C) 2011 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
 
